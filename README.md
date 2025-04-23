@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Startup Pitch
 
-## Getting Started
+Startup Pitch is a platform where startup founders can showcase their innovative ideas, and the community can engage by viewing, commenting, and offering feedback. Whether you're looking for validation, potential collaborators, or just want to share your vision, Startup Pitch is the space to connect and grow your startup journey.
 
-First, run the development server:
+## Features
+
+- **Idea Upload**: Startup owners can upload their innovative ideas with detailed descriptions.
+- **Community Engagement**: Viewers can comment, like, and interact with posted ideas.
+- **Authentication**: Secure login using NextAuth for a personalized experience.
+- **Dynamic Content**: Content management and updates powered by Sanity.
+- **Responsive Design**: Tailwind CSS ensures the platform is fully responsive and user-friendly.
+
+## Tech Stack
+
+- **HTML & Tailwind CSS**: For the structure and design of the application.
+- **Next.js**: React framework for building the front end and handling server-side rendering.
+- **TypeScript**: For static typing, ensuring robust and error-free code.
+- **NextAuth.js**: Authentication system for handling user login and sessions.
+- **Sanity**: Headless CMS for managing dynamic content like startup ideas and comments.
+
+## Setup
+
+To get started with the project locally:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/i-am-Shekinah/startup-pitch.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd startup-pitch
+   ```
+
+3. Install the required dependencies:
+
+   ```bash
+   pnpm install
+   ```
+
+4. Set up environment variables:
+
+   - Create a `.env.local` file in the root of the project
+   - Add your necessary environment variables, such as for NextAuth and Sanity:
+
+   ```bash
+   NEXTAUTH_URL=http://localhost:3000
+   SANITY_PROJECT_ID=your_sanity_project_id
+   SANITY_DATASET=your_sanity_dataset
+   NEXTAUTH_SECRET=your_nextauth_secret
+   ```
+
+5. Run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. Visit `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+If you'd like to contribute to this project, feel free to fork the repository and submit pull requests. You can also report issues or suggest new features by opening an issue on GitHub.
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔗 Live Demo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The live site will be available once development is complete. Stay tuned!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<!--
+Check out the live version of the project here:
+👉 [Startup Pitch on Vercel](https://startup-pitch.vercel.app) -->
