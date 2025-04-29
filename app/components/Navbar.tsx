@@ -1,11 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-import {
-  auth,
-  signIn,
-  signOut,
-} from '@/auth';
+import { auth, signIn, signOut } from "@/auth";
 
 export default async function Navbar() {
   const session = await auth();
@@ -22,17 +18,17 @@ export default async function Navbar() {
             {session && session?.user ? (
               <>
                 <Link href="/startup/create">
-                  <span>Create</span>
+                  <button type="button">Create</button>
                 </Link>
 
                 <form
                   action={async () => {
                     "use server";
-                    await signOut();
+                    await signOut({ redirectTo: "/" });
                   }}
                   aria-label="Sign out"
                 >
-                  <span>Sign out</span>
+                  <button type="submit">Sign out</button>
                 </form>
 
                 <Link href={`/user/${session?.user?.id}`}>
