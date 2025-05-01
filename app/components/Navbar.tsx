@@ -1,7 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { auth, signIn, signOut } from "@/auth";
+import {
+  auth,
+  signIn,
+  signOut,
+} from '@/auth';
 
 export default async function Navbar() {
   const session = await auth();
@@ -9,16 +13,20 @@ export default async function Navbar() {
     <>
       <header className="px-5 py-3 bg-white shadow-sm font-work-sans">
         <nav className="flex justify-between items-center">
+          {/* logo */}
           <Link href="/">
             <Image src="/logo.png" alt="logo" width={166} height={48} />
             {/* 498x144 actual size */}
           </Link>
 
+          {/* nav links */}
           <div className="flex items-center gap-5 text-black">
             {session && session?.user ? (
               <>
                 <Link href="/startup/create">
-                  <button type="button">Create</button>
+                  <button type="button" className="cursor-pointer">
+                    Create
+                  </button>
                 </Link>
 
                 <form
@@ -28,7 +36,9 @@ export default async function Navbar() {
                   }}
                   aria-label="Sign out"
                 >
-                  <button type="submit">Sign out</button>
+                  <button type="submit" className="cursor-pointer">
+                    Sign out
+                  </button>
                 </form>
 
                 <Link href={`/user/${session?.user?.id}`}>
