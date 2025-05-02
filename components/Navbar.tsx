@@ -1,11 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-import {
-  auth,
-  signIn,
-  signOut,
-} from '@/auth';
+import { auth, signOut } from "@/auth";
 
 export default async function Navbar() {
   const session = await auth();
@@ -46,20 +42,21 @@ export default async function Navbar() {
                 </Link>
               </>
             ) : (
-              <form
-                action={async () => {
-                  "use server";
-                  await signIn("github");
-                }}
-                aria-label="Sign in with GitHub"
-              >
-                <button
-                  type="submit"
-                  className="cursor-pointer hover:text-red-500"
-                >
-                  Sign in
-                </button>
-              </form>
+              <>
+                <Link href="/login">
+                  <button
+                    type="button"
+                    className="cursor-pointer border-1 border-gray-500 rounded-md px-6 py-2 hover:bg-gray-100 transition-colors duration-300"
+                  >
+                    Log in
+                  </button>
+                </Link>
+                <Link href="/signup">
+                  <button type="button" className="btn-primary">
+                    Sign up
+                  </button>
+                </Link>
+              </>
             )}
           </div>
         </nav>
