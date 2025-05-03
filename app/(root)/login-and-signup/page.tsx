@@ -14,15 +14,22 @@ export default function Login() {
 
       {/* continue buttons */}
       <section className="flex flex-col gap-4 mt-6 ">
-        <button
-          type="submit"
-          className="btn-secondary flex items-center justify-center gap-2 relative sm:w-90"
+        <form
+          action={async () => {
+            "use server";
+            await signIn("google", { redirectTo: "/" });
+          }}
         >
-          <span className="absolute left-6">
-            <FcGoogle />
-          </span>
-          Continue with Google
-        </button>
+          <button
+            type="submit"
+            className="btn-secondary flex items-center justify-center gap-2 relative sm:w-90"
+          >
+            <span className="absolute left-6">
+              <FcGoogle />
+            </span>
+            Continue with Google
+          </button>
+        </form>
 
         <form
           action={async () => {
