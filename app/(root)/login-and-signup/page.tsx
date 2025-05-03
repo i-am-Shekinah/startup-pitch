@@ -26,7 +26,7 @@ export default function Login() {
 
         <form
           action={async () => {
-            "user server";
+            "use server";
             await signIn("github");
           }}
         >
