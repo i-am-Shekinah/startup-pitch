@@ -20,7 +20,7 @@ export default async function Navbar() {
             {session && session?.user ? (
               <>
                 <Link href="/startup/create">
-                  <button type="button" className="cursor-pointer">
+                  <button type="button" className="btn-primary">
                     Create
                   </button>
                 </Link>
@@ -32,7 +32,7 @@ export default async function Navbar() {
                   }}
                   aria-label="Sign out"
                 >
-                  <button type="submit" className="cursor-pointer">
+                  <button type="submit" className="btn-secondary">
                     Sign out
                   </button>
                 </form>
@@ -43,16 +43,26 @@ export default async function Navbar() {
               </>
             ) : (
               <>
-                <Link href="/login">
+                {/* display only on xs screens */}
+                <Link href="/login-and-signup">
+                  <button type="button" className="btn-primary sm:hidden">
+                    Log in
+                  </button>
+                </Link>
+
+                <Link href="/login-and-signup">
                   <button
                     type="button"
-                    className="cursor-pointer border-1 border-gray-500 rounded-md px-6 py-2 hover:bg-gray-100 transition-colors duration-300"
+                    className="btn-secondary hidden sm:inline-block"
                   >
                     Log in
                   </button>
                 </Link>
-                <Link href="/signup">
-                  <button type="button" className="btn-primary">
+                <Link href="/login-and-signup">
+                  <button
+                    type="button"
+                    className="hidden btn-primary sm:inline-block"
+                  >
                     Sign up
                   </button>
                 </Link>
