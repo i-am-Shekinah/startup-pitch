@@ -17,7 +17,7 @@ export default async function Navbar() {
           </Link>
 
           {/* nav links */}
-          <div className="flex items-center gap-5 text-black">
+          <div className="flex items-center sm:gap-5 text-black">
             {session && session?.user ? (
               <>
                 <Link href="/startup/create">
