@@ -1,9 +1,9 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { IBM_Plex_Serif } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const roboto = IBM_Plex_Serif({
+const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
   weight: ["100", "200", "300", "400", "500", "600", "700"],
@@ -20,10 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${roboto.variable} ${roboto.variable} antialiased`}>
-        {children}
-      </body>
+    <html lang="en" className={poppins.className}>
+      <body>{children}</body>
     </html>
   );
 }
