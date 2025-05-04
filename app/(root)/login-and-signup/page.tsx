@@ -9,7 +9,7 @@ export default function Login() {
       <h1 className="text-3xl font-semibold">Log in or sign up in seconds</h1>
       <p className="font-light font- text-gray-500 mt-2 mb-4">
         Use your email or another service to continue with startup pitch.
-        <strong> It's free!</strong>
+        <strong> It&apos;s free!</strong>
       </p>
 
       {/* continue buttons */}
