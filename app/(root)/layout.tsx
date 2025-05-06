@@ -1,4 +1,4 @@
-import Navbar from "@/components/NavbarClient";
+import NavbarClient from "@/components/NavbarClient";
 
 export default function RootLayout({
   children,
@@ -7,7 +7,7 @@ export default function RootLayout({
 }>) {
   return (
     <main>
-      <Navbar />
+      <NavbarClient session={null} />
       {children}
     </main>
   );

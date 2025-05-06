@@ -60,7 +60,9 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
         <p className="mt-4">
           By continuing, you agree to our{" "}
           <Link href="/policies/terms-of-use">
-            <span className="text-primary underline">Term's of Service</span>
+            <span className="text-primary underline">
+              Term&apos;s of Service
+            </span>
           </Link>{" "}
           and{" "}
           <span className="text-primary underline underline-offset-4">
