@@ -61,7 +61,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
           By continuing, you agree to our{" "}
           <Link href="/policies/terms-of-use">
             <span className="text-primary underline">
-              Term&apos;s of Service
+              Terms of Service
             </span>
           </Link>{" "}
           and{" "}
