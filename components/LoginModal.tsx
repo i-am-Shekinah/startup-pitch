@@ -1,8 +1,11 @@
+"use client";
+import React from "react";
+
+import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
-import { signIn } from "@/auth";
 import {
   Description,
   Dialog,
@@ -36,7 +39,12 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
         {/* Continue buttons */}
         <section className="flex flex-col gap-4 mt-6">
           <button
-            onClick={() => signIn("google", { callbackUrl: "/" })}
+            onClick={() =>
+              signIn("google", {
+                callbackUrl:
+                  typeof window !== "undefined" ? window.location.href : "/",
+              })
+            }
             type="button"
             className="btn-secondary flex items-center justify-center gap-2 w-full min-w-60 relative"
           >
@@ -60,9 +68,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
         <p className="mt-4">
           By continuing, you agree to our{" "}
           <Link href="/policies/terms-of-use">
-            <span className="text-primary underline">
-              Terms of Service
-            </span>
+            <span className="text-primary underline">Terms of Service</span>
           </Link>{" "}
           and{" "}
           <span className="text-primary underline underline-offset-4">
