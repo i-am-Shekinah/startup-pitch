@@ -9,7 +9,7 @@ export default async function RootLayout({
   const session = await auth();
   return (
     <main>
-      <NavbarClient session={session} />
+      <NavbarClient />
       {children}
     </main>
   );

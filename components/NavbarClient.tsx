@@ -1,16 +1,15 @@
 "use client";
 import { useState } from "react";
 
-import { Session } from "next-auth";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { signOut } from "@/auth";
-
 import LoginModal from "./LoginModal";
 
-export default function NavbarClient({ session }: { session: Session | null }) {
+export default function NavbarClient() {
   const [modalOpen, setModalOpen] = useState(false);
+  const { data: session, status } = useSession();
   console.log(session);
   return (
     <>
@@ -40,9 +39,11 @@ export default function NavbarClient({ session }: { session: Session | null }) {
                   Sign out
                 </button>
 
-                <Link href={`/user/${session?.user?.id}`}>
-                  <span>{session?.user?.name}</span>
-                </Link>
+                {session.user?.id && (
+                  <Link href={`/user/${session?.user?.id}`}>
+                    <span>{session?.user?.name}</span>
+                  </Link>
+                )}
               </>
             ) : (
               <>

@@ -1,6 +1,11 @@
-export default function TermsOfUse() {
+import { auth } from "@/auth";
+import NavbarClient from "@/components/NavbarClient";
+
+export default async function TermsOfUse() {
+  const session = await auth();
   return (
     <>
+      <NavbarClient session={session} />
       <h1 className="text-2xl">Terms of Use</h1>
       <p>
         By using this website, you agree to the following terms and conditions.
