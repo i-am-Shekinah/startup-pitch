@@ -1,4 +1,4 @@
-import NavbarClient from "@/components/NavbarClient";
+import Navbar from "@/components/Navbar";
 
 export default async function RootLayout({
   children,
@@ -7,7 +7,7 @@ export default async function RootLayout({
 }>) {
   return (
     <main>
-      <NavbarClient />
+      <Navbar />
       {children}
     </main>
   );
