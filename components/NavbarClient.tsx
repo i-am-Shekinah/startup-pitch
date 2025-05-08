@@ -9,7 +9,7 @@ import LoginModal from "./LoginModal";
 
 export default function NavbarClient() {
   const [modalOpen, setModalOpen] = useState(false);
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   console.log(session);
   return (
     <>
