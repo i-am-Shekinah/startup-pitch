@@ -1,9 +1,9 @@
-import NavbarClient from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 
 export default async function TermsOfUse() {
   return (
     <>
-      <NavbarClient />
+      <Navbar />
       <h1 className="text-2xl">Terms of Use</h1>
       <p>
         By using this website, you agree to the following terms and conditions.
