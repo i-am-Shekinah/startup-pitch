@@ -39,10 +39,12 @@ export default function NavbarClient() {
                   Sign out
                 </button>
 
-                {session.user?.id && (
+                {session.user?.id ? (
                   <Link href={`/user/${session?.user?.id}`}>
                     <span>{session?.user?.name}</span>
                   </Link>
+                ) : (
+                  <span>{session?.user?.name}</span>
                 )}
               </>
             ) : (

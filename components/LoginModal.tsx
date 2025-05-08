@@ -27,11 +27,11 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
     >
       <div className="fixed inset-0 bg-black/50" aria-hidden="true" />
       <DialogPanel className="relative z-50 bg-white rounded-lg p-6 sm:p-10 max-w-md w-full  shadow-lg">
-        <DialogTitle className="text-3xl font-semibold">
+        <DialogTitle className="text-2xl font-semibold">
           Log in or sign up in seconds
         </DialogTitle>
         <Description>
-          <p className="font-light text-gray-500 mt-2 mb-4">
+          <p className="text-sm font-light text-gray-500 mt-2 mb-4">
             Use your email or another service to continue with startup pitch.{" "}
             <strong>It&apos;s free!</strong>
           </p>
@@ -65,7 +65,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
             Continue with GitHub
           </button>
         </section>
-        <p className="mt-4">
+        <p className="mt-5 text-sm font-light ">
           By continuing, you agree to our{" "}
           <Link href="/policies/terms-of-use">
             <span className="text-primary underline">Terms of Service</span>
