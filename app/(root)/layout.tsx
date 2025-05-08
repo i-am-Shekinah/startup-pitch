@@ -1,13 +1,15 @@
+import { auth } from "@/auth";
 import NavbarClient from "@/components/NavbarClient";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await auth();
   return (
     <main>
-      <NavbarClient session={null} />
+      <NavbarClient session={session} />
       {children}
     </main>
   );
