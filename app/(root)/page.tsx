@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <main className="blue-container">
+      <main className="blue-container overflow-x-hidden">
         <h1 className="heading font-work-sans">
           Pitch Your Startup, <br />
           Connect with Entrepreneurs
