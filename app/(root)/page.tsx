@@ -1,7 +1,17 @@
 export default function Home() {
   return (
     <>
-      <h1 className="text-2xl">HOME</h1>
+      <main className="blue-container">
+        <h1 className="heading font-work-sans">
+          Pitch Your Startup, <br />
+          Connect with Entrepreneurs
+        </h1>
+
+        <p className="sub-heading !max-w-3xl">
+          Submit Ideas, Vote on Pitches, and Get Noticed on Virtual
+          Competitions.
+        </p>
+      </main>
     </>
   );
 }
