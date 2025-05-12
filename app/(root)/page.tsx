@@ -1,11 +1,11 @@
 import SearchBar from "@/components/SearchBar";
 
-export default function Home({
+export default async function Home({
   searchParams,
 }: {
-  searchParams: { query: string };
+  searchParams: Promise<{ query: string }>;
 }) {
-  const query: string = searchParams.query ?? "";
+  const query: string = (await searchParams).query ?? "";
 
   return (
     <>
