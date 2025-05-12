@@ -5,7 +5,7 @@ export default function Home({
 }: {
   searchParams: { query: string };
 }) {
-  const query: string = searchParams.query || "";
+  const query: string = searchParams.query ?? "";
 
   return (
     <>
