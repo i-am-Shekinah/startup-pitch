@@ -1,4 +1,12 @@
-export default function Home() {
+import SearchForm from "@/components/SearchForm";
+
+export default function Home({
+  searchParams,
+}: {
+  searchParams: { query: string };
+}) {
+  const query: string = searchParams.query || "";
+
   return (
     <>
       <main className="blue-container overflow-x-hidden">
@@ -11,6 +19,8 @@ export default function Home() {
           Submit Ideas, Vote on Pitches, and Get Noticed on Virtual
           Competitions.
         </p>
+
+        <SearchForm query={query} />
       </main>
     </>
   );

@@ -7,7 +7,7 @@ import Link from "next/link";
 
 import LoginModal from "./LoginModal";
 
-export default function NavbarClient() {
+export default function Navbar() {
   const [modalOpen, setModalOpen] = useState(false);
   const { data: session } = useSession();
   console.log(session);
