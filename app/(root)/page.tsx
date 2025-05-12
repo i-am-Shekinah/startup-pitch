@@ -1,4 +1,4 @@
-import SearchForm from "@/components/SearchForm";
+import SearchBar from "@/components/SearchBar";
 
 export default function Home({
   searchParams,
@@ -20,7 +20,7 @@ export default function Home({
           Competitions.
         </p>
 
-        <SearchForm query={query} />
+        <SearchBar initialQuery={query} />
       </main>
     </>
   );
